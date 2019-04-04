@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+  coordinator:
+    image: chethanuk/presto-coordinator:307
+    ports:
+      - "8080:8080"
+    container_name: "coordinator"
+    command: coordinator
+  worker0:
+    image: chethanuk/presto-worker:307
+    container_name: "worker0"
+    ports:
+      - "8081:8081"
+    command: worker0
+  worker1:
+    image: chethanuk/presto-worker:307
+    container_name: "worker1"
+    ports:
+      - "8082:8081"
+    command: worker1
+  worker2:
+    image: chethanuk/presto-worker:307
+    container_name: "worker2"
+    ports:
+      - "8083:8081"
+    command: worker2  
+  worker2:
+    image: chethanuk/presto-worker:307
+    container_name: "worker4"
+    ports:
+      - "8084:8081"
+    command: worker3  
+  # worker3:
+  #   build: 
+  #     context: ./presto-worker
+  #     args:
+  #       node_id: worker3
+  #   container_name: "worker3"
+  #   ports:
+  #     - "8083:8081"
