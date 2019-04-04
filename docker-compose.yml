@@ -25,9 +25,9 @@ services:
     ports:
       - "8083:8081"
     command: worker2  
-  worker2:
+  worker3:
     image: chethanuk/presto-worker:307
-    container_name: "worker4"
+    container_name: "worker3"
     ports:
       - "8084:8081"
     command: worker3  
