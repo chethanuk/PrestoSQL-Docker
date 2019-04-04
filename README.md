@@ -26,19 +26,19 @@ version: '3'
 
 services:
   coordinator:
-    image: chethanuk/presto-coordinator:307-SNAPSHOT
+    image: chethanuk/presto-coordinator:307
     ports:
       - "8080:8080"
     container_name: "coordinator"
     command: coordinator
   worker0:
-    image: chethanuk/presto-worker:307-SNAPSHOT
+    image: chethanuk/presto-worker:307
     container_name: "worker0"
     ports:
       - "8081:8081"
     command: worker0
   worker1:
-    image: chethanuk/presto-worker:307-SNAPSHOT
+    image: chethanuk/presto-worker:307
     container_name: "worker1"
     ports:
       - "8082:8081"
@@ -61,4 +61,4 @@ YouTube: Presto Channel
 
 # Credits to Kai for his Awesome Work!.
 
-I have upload in my docker hub for my personal testing of prestosql.io
+I have just build custom Dockerfiles with different tag and uploaded in my docker hub for my personal testing of prestosql.io and custom changes in future..
