@@ -18,7 +18,7 @@ LABEL maintainer="Presto community <https://prestosql.io/community.html>"
 
 ADD etc /usr/lib/presto/etc
 
-EXPOSE 8080
+# EXPOSE 8080
 
 # WORKDIR /usr/local/presto
 # ENTRYPOINT ["./scripts/presto.sh"]

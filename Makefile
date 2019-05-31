@@ -1,8 +1,8 @@
 PRESTO_VERSION := 312
 
 local:
-	docker build --build-arg VERSION=${PRESTO_SNAPSHOT_VERSION} -t prestosql/presto:${PRESTO_SNAPSHOT_VERSION} presto-coordinator
-	docker build --build-arg VERSION=${PRESTO_SNAPSHOT_VERSION} -t prestosql/presto:${PRESTO_SNAPSHOT_VERSION} presto-worker	
+	docker build --build-arg VERSION=${PRESTO_VERSION} -t prestosql/presto-coordinator:${PRESTO_VERSION} presto-coordinator
+	docker build --build-arg VERSION=${PRESTO_VERSION} -t prestosql/presto-worker:${PRESTO_VERSION} presto-worker	
 
 .PHONY: test clean
 
