@@ -1,10 +1,7 @@
 ARG VERSION
 
-FROM chethanuk/presto-base:${VERSION}
+FROM prestosql/presto:${VERSION}
 MAINTAINER chethanuk
 
-COPY etc /usr/local/presto/etc
+ADD etc /usr/lib/presto/etc
 EXPOSE 8081
-
-WORKDIR /usr/local/presto
-ENTRYPOINT [ "./scripts/presto.sh" ]
